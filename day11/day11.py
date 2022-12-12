@@ -16,7 +16,6 @@ throws_false = []
 
 i = 0
 n = len(lines)
-start = True
 while i < n:
     line = lines[i].strip("/n").strip()
     if line != "":
