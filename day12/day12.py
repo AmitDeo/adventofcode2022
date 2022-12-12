@@ -47,7 +47,7 @@ for r in range(rows):
                     adjacent[(r, c)].add((nr, nc))
 
 
-def dfs(source, destination):
+def bfs(source, destination):
     """
     Breadth first search will guarantee shortest path
     Time complexity: O(V+E)
@@ -69,11 +69,11 @@ def dfs(source, destination):
 
 
 # Part 1
-print(dfs(S, E))
+print(bfs(S, E))
 
 # Part 2
 min_distance = float('inf')
 for source in sources:
-    min_distance = min(min_distance, dfs(source, E))
+    min_distance = min(min_distance, bfs(source, E))
 
 print(min_distance)
